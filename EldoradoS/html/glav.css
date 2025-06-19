@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    height: auto;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Верхняя панель */
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.ticker {
+  display: inline-block;
+  padding-right: 50px;
+  animation: ticker 7s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(-10px);
+  }
+  25% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+  75% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+.user-actions a {
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    color: #ff6b00;
+}
+
+.user-actions i {
+    margin-right: 5px;
+}
+
+
+
+/* Навигационное меню */
+.main-nav {
+    background-color: #ff6b00;
+    color: white;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-right: 20px;
+}
+
+.main-nav a {
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+.znak{
+  font-weight: bold;
+  color: black;
+}
+.active
+{
+    font-size: 120%;
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
+}
+/* начало текста и картинок */
+.textO{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.texto{
+  font-size: 17px;
+  margin-top: 10px;
+}
+.Gtext{
+  height: 800px;
+  width: 1200px;
+    margin-left: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.Gtext1{
+  width: 1200px;
+    margin-left: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.reklams{
+  padding-top:30px;
+}
+.rek1{
+  border-radius: 6px;
+  width: 480px; 
+  flex-shrink: 0; 
+  padding: 5px;
+  display: inline-block;
+  border: 2px solid #333;
+    transition: opacity 0.3s;
+  
+}
+.rek10{
+  border-radius: 6px;
+  width: 920px; 
+  flex-shrink: 0; 
+  padding: 5px;
+  display: inline-block;
+  border: 2px solid #ff6b00;
+    transition: opacity 0.3s;
+  
+}
+.flex3{
+  width: 300px;
+}
+.rek1:hover{
+  display: inline-block;
+  border: 2px solid #ff6b00;
+    opacity:0.8;
+}
+.povest{
+  flex: 1; 
+    min-width: 0;
+}
+.rekcolum{
+  margin-top: 5px;
+  display: flex;
+  gap:10px;
+}
+.img{
+  flex:1;
+}
+.rekt{
+  flex: 2;
+}
+.linet{
+  text-decoration: line-through;
+  color: #999;
+}
+.buy{
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+.rek2{
+  margin-top: 80px;
+}
+/* всплывающее сообщение */
+.notification {
+  position: fixed;
+  bottom: -100px; /* Скрыто за пределами экрана */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff6b00;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.login-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #e05d00;
+} 
+/* кнопка купить */
+.nojob-button {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.nojob-button:hover {
+  background-color: #e05d00; /* Темнее при наведении */
+}
+/* футер */
+.footer {
+  background-color: #333; /* Темный фон */
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footercontent {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footerlink {
+  color: #ff6b00; /* Оранжевый как в основном дизайне */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footerlink:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
