@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="glav.css">
+    <link rel="icon" href="img\student.png">
 
-    <title>Эльдорадо - Отзывы о доставках</title>
+
+    <title>Эльдорадо - Связь с нами</title>
 </head>
 
 <body>
@@ -17,7 +19,6 @@
             <ul>
                 <li><a href="index.html">Новости об акциях и скидках</a></li>
                 <li><a href="popular.html">Популярные товары</a></li>
-                <li><a href="otzuv.html">Отзывы о доставках</a></li>
                 <li class="active"><a href="contact.html">Связь с нами</a></li>
             </ul>
             <div class="znak">
@@ -33,24 +34,68 @@
             <div class="user-actions">
                 <button id="login" class="login-button">Войти в аккаунт</button>
                 <button class="login-button buy-btn">Корзина</button>
+                <button id="adminBtn" class="login-button">Admin</button>
             </div>
         </div>
     </div>
     <!-- всплывающеее сообщение -->
     <div id="notification" class="notification">Эта функция пока недоступна</div>
     <!-- здесь будет текст и реклама -->
-<div class="Gtext"></div>
-    
-    <!-- футер -->
-    <footer class="footer">
-        <div class="footercontent">
-            <div class="copyright">
-                <p>© 2025 Учебный проект "Эльдорадо". Все права защищены.</p>
+    <div class="Gtext">
+        <div class="contact-container">
+            <h1>📨 Связь с нами</h1>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label>Ваше имя:</label>
+                    <input type="text" name="name" required class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label>Email для ответа:</label>
+                    <input type="email" name="email" required class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label>Тема сообщения:</label>
+                    <input type="text" name="subject" required class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label>Ваше сообщение:</label>
+                    <textarea name="message" rows="5" required class="form-textarea"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn nojob-button">Отправить сообщение</button>
+            </form>
+
+            <div id="formSuccess" class="notification-success" style="display: none;">
+                <p>Спасибо! Ваше сообщение получено.</p>
             </div>
-            <a href="contact.html" class="footerlink">Связь с нами</a>
+            <div id="adminPanel"
+                style="display: none; margin-top: 50px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                <h3>Панель администратора</h3>
+                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                    <button id="viewMessagesBtn" class="login-button">Показать сообщения</button>
+                    <button id="clearMessagesBtn" class="login-button" style="background: #ff4444;">Очистить
+                        все</button>
+                </div>
+
+                <!-- контейнер для сообщений -->
+                <div id="messagesContainer"></div>
+            </div>
         </div>
-    </footer>
+    </div>
     <script src="script.js"></script>
 </body>
+<!-- футер -->
+<footer class="footer">
+    <div class="footercontent">
+        <div class="copyright">
+            <p>© 2025 Учебный проект "Эльдорадо". Все права защищены.</p>
+        </div>
+        <a href="contact.html" class="footerlink">Связь с нами</a>
+    </div>
+</footer>
 
 </html>
